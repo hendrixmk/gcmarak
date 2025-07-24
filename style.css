@@ -41,21 +41,13 @@ body {
         margin-top: 1rem;
       }
     }
-<<<<<<< HEAD
-=======
- .text-gradient {
- color: #D2B48C; 
- background-image: linear-gradient(45deg, #D2B48C , #C4A77E , #B69A70 , #A88D62 , #9A8054 ); 
- background-clip: text; 
- -webkit-background-clip: text; 
- -webkit-text-fill-color: transparent; 
- border-bottom: 1.5px solid #ffffff54;
- display: inline;
-}
-
->>>>>>> 32dbb64c683b34e93384a247e82c7e5d6748c46f
     header p{
         color: #ffffffbd;
+    }
+     @media (max-width: 599px){
+      header p{
+        font-size: 10px;
+      } 
     }
      header img {
       width: 350px;
