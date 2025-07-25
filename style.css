@@ -3,31 +3,105 @@ body {
       font-family: 'Roboto', sans-serif;
       background-color: #f5f5f5;
       color: #333;
-    }
-    header {
-      background-color: #10850c;
-      color: #ffffffc5;
-      padding: 1rem;
-      text-align: center;
-    }
-      .header-icons {
-      position: absolute;
-      top: 2.3rem;
-      left: 2.5rem;
-      display: flex;
-      gap: 1rem;
-    }
-    .header-icons a {
-      font-size: 1rem;
-      color: rgba(0, 0, 0, 0.644);
-      text-decoration: none;
-      transition: transform 0.2s ease;
-    }
-    .header-icons a:hover {
-      transform: scale(1.2);
-      color: #ffffff70;
-    }
-    .mobile-icons {
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background: #52c234;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1f6d02, #52c234);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #165001, #52c234); /* W3C standard */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: box-shadow 0.3s ease;
+  border-bottom: 1px solid #312c2c52;
+}
+
+/* Shadow on hover */
+header:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 960px;              /* ✅ Smaller container */
+  margin: 0 auto;
+  padding: 0.3rem 1rem;
+  gap: 1rem;
+}
+
+/* Left: Logo + Brand */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.header-left img {
+  height: 30px;
+}
+
+.header-left span {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Center: Tagline */
+.header-middle {
+  font-size: 0.9rem;
+  color: #222;
+  text-align: center;
+  flex: 1;
+}
+
+/* Right: Icons */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-icons a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.header-icons a:hover {
+  color: #f0ebeb;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .header-container {
+   
+    padding: 0.3rem 0.7rem;
+  }
+@media (max-width: 600px) {
+  .header-left img {
+    height: 30px;
+  }
+}
+
+  .header-middle {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-icons {
+    justify-content: center;
+  }
+}
+
+  .mobile-icons {
       display: none;
     }
     @media (max-width: 599px) {
@@ -38,35 +112,29 @@ body {
         display: flex;
         justify-content: center;
         gap: 2rem;
-        margin-top: 1rem;
+        margin-top: 0.1rem;
       }
     }
     header p{
-        color: #ffffffbd;
+        color: #ffffff79;
     }
      @media (max-width: 599px){
       header p{
         font-size: 10px;
       } 
     }
-     header img {
-      width: 350px;
-      height: auto;
-      display: block;
-      margin: 0 auto 0.9rem;
-    }
     nav {
       background: #0b151f;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       padding: 0.5rem;
     }
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
-      margin: 0.3rem 0;
+      font-weight: 15;  
+      margin: 0.2rem 0;
       padding: 0.3rem 0.5rem;
       transition: background 0.3s, color 0.3s;
       border-radius: 4px;
@@ -81,8 +149,12 @@ body {
         justify-content: center;
         gap: 2rem;
       }
+    }
+    @media (max-width: 768px){
       nav a {
         margin: 0;
+        font-size: 13px;
+        padding: 0.3rem 1.3rem;
       }
     }
     section{
@@ -137,7 +209,8 @@ body {
 
     .gservices {
       background-color: #111;
-      padding: 40px 20px;
+      padding: 2px 30px;
+      padding-bottom: 2.5rem;
     }
 
     .gservices h3 {
@@ -183,7 +256,7 @@ body {
       }
     }
         #about{
-          text-align: center;
+          text-align: left;
       max-width: 800px;
       background: linear-gradient(to right, #ffffff, #f0f8ff);
        border-radius: 5px;
@@ -207,8 +280,8 @@ body {
     }
     .services{
       max-width: 800px;
-            background: linear-gradient(to right, #ffffff, #f0f8ff);
-       border-radius: 5px;
+      background: linear-gradient(to right, #ffffff, #f0f8ff);
+      border-radius: 5px;
       padding: 4rem;
       box-shadow: 0 8px 10px rgba(0, 0, 0, 0.08);
       margin-top: 1.8rem;
@@ -267,7 +340,7 @@ body {
     }
         .contact-info {
        color: #333333a2;
-      line-height: 1.6;
+      line-height: 1;
       font-size: 1rem;
     }
     .contact-info i {
